@@ -1,67 +1,139 @@
 # Zync-It
 
-_Zync-it web app is a code editor that allows its users to collaborate and write code together. It provides basic editing features and the changes are synced in realtime. The editor supports syntax of 21 programming languages and offers 63 design themes._
+Zync-It is a web-based **real-time collaborative code editor** that allows multiple users to join a shared room and write code together. Code changes are synchronized in real time between connected users, making it easier for users to collaborate on coding tasks.
 
-<br/>
+The editor supports syntax highlighting for **21 programming languages** and provides **63 editor themes**.
 
-**Link to the web app:** [(https://zync-it-frontend1.onrender.com/) <br/>
+## ✨ Features
 
-<br/>
+* **Real-Time Collaboration** — Multiple users can work on the same code simultaneously.
+* **Room-Based Collaboration** — Users can join a shared room using a room ID.
+* **Real-Time Code Synchronization** — Code changes are automatically shared with other users in the same room.
+* **21 Programming Languages** — Supports syntax highlighting for multiple programming languages.
+* **63 Editor Themes** — Provides multiple themes for customizing the coding environment.
+* **User Notifications** — Users are notified when other participants join or leave the room.
+* **Responsive Design** — The application works across different screen sizes.
 
-### Tech Stack ###
-  **Frontend**
-  * React
-  * Recoil
-  * CodeMirror
-  * react-hot-toast
-  * axios
-  * react-router
-  
-  **Backend**
-  * Node.js
-  * Express.js
-  * Socket.io
+## 🛠️ Tech Stack
 
-<br/>
+### Frontend
 
-### Features ###
-* **Responsive Design**
-* **Realtime Collobarative Code Editor**
-* **Supports syntax of 21 programming languages**
-* **Supports 63 design themes**
+* **React.js** — User interface
+* **Recoil** — State management
+* **CodeMirror** — Code editor
+* **React Router** — Client-side routing
+* **Axios** — HTTP requests
+* **React Hot Toast** — User notifications
 
+### Backend
 
-<br/>
-<br/>
+* **Node.js** — Server-side runtime
+* **Express.js** — Backend server
+* **Socket.io** — Real-time communication between users
 
-- - - -
+## 🔄 How It Works
 
-## Getting Started with Create React App
+1. A user enters the application and creates or joins a collaboration room.
+2. A Socket.io connection is established between the client and server.
+3. The user's socket is added to the selected room.
+4. Users inside the same room can edit code together.
+5. When a user changes the code, the change is sent to other users in the room in real time.
+6. When a new user joins, the current code can be synchronized with that user.
+7. When a user disconnects, the remaining participants are notified.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📁 Project Structure
 
-## Available Scripts
+```text
+Zync-It/
+│
+├── backend/
+│   ├── server.js
+│   └── package.json
+│
+├── public/
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── Actions.js
+│   └── ...
+│
+├── package.json
+├── package-lock.json
+└── README.md
+```
 
-In the project directory, you can run:
+## 🚀 Getting Started
 
-### `npm start`
+### Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Make sure the following are installed:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Node.js
+* npm
+* Git
 
-### `npm test`
+### 1. Clone the Repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/Aayushi-800/Zync-It.git
+cd Zync-It
+```
 
-### `npm run build`
+### 2. Install Frontend Dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 3. Start the Frontend
 
+```bash
+npm start
+```
+
+The frontend will run at:
+
+```text
+http://localhost:3000
+```
+
+### 4. Start the Backend
+
+Open another terminal and run:
+
+```bash
+cd backend
+npm install
+npm start
+```
+
+The backend will run on:
+
+```text
+http://localhost:5001
+```
+
+## 💡 Collaboration Flow
+
+```text
+User 1 ──┐
+         │
+User 2 ──┼──> Socket.io Server ──> Shared Room
+         │
+User 3 ──┘
+              ↓
+        Code Synchronization
+```
+
+All connected users in the same room receive code updates in real time.
+
+## 🔮 Future Improvements
+
+* User authentication
+* Persistent code storage
+* Save and load coding projects
+* File and folder support
+* Code execution
+* Improved room management
+* Better collaboration features

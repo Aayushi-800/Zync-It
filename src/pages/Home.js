@@ -81,7 +81,7 @@ const Home = () => {
             <footer>
                 <h4>
                     Built with ❤️ by &nbsp;
-                    <a href="https://github.com/TANiSH-17/Zync-It" target="_blank" rel="noopener noreferrer">TANiSH</a>
+                    <a href="https://github.com/Aayushi-800/Zync-It.git" target="_blank" rel="noopener noreferrer">AAYUSHI</a>
                 </h4>
             </footer>
         </div>
